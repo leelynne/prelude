@@ -3,6 +3,14 @@
 ;;
 ;;; Code:
 
+;; Auto-complete stuff
+(require 'auto-complete-config)
+(ac-config-default)
+(ac-set-trigger-key "TAB")
+
+(require 'go-autocomplete)
+
+(setq ecb-tip-of-the-day nil)
 (setq-default tab-width 4)
 (global-set-key "\C-w" 'backward-kill-word)
 
