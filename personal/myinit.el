@@ -19,6 +19,7 @@
 (global-set-key (kbd "C-c <C-right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-c <C-down>") 'shrink-window)
 (global-set-key (kbd "C-c <C-up>") 'enlarge-window)
+(global-set-key (kbd "<f11>") 'fullscreen-mode-fullscreen-toggle)
 
 ;; Tab stuff
 (setq c-basic-offset 4) ; indents 4 chars
@@ -32,4 +33,7 @@
           '(lambda () (toggle-truncate-lines 1)))
 (setq comint-prompt-read-only t)
 
+;; extension to mode list.  Most modes are taken care of by
+;; their plugin
+(add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
 ;;; myinit.el ends here
