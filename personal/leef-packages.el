@@ -16,7 +16,7 @@
 (package-initialize)
 
 (defvar leef-packages
-  '(auto-complete ecb go-autocomplete go-mode fullscreen-mode puppet-mode)
+  '(auto-complete ecb go-autocomplete go-mode fullscreen-mode flymake-cursor puppet-mode)
   "A list of packages to ensure are installed at launch.")
 
 (defun leef-packages-installed-p ()

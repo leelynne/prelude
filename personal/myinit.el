@@ -33,7 +33,14 @@
           '(lambda () (toggle-truncate-lines 1)))
 (setq comint-prompt-read-only t)
 
+;; Loading
+(add-to-list 'load-path "~/.emacs.d/puppet-flymake/")
 ;; extension to mode list.  Most modes are taken care of by
 ;; their plugin
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
+
+;; puppet-lint
+(require 'flymake-puppet)
+(add-hook 'puppet-mode-hook (lambda () (flymake-puppet-load)))
+
 ;;; myinit.el ends here
