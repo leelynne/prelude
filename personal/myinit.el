@@ -43,4 +43,6 @@
 (require 'flymake-puppet)
 (add-hook 'puppet-mode-hook (lambda () (flymake-puppet-load)))
 
+;; mustache
+(require 'mustache-mode)
 ;;; myinit.el ends here
