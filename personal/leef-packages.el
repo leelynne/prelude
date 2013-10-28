@@ -16,7 +16,7 @@
 (package-initialize)
 
 (defvar leef-packages
-  '(auto-complete ecb go-autocomplete go-mode fullscreen-mode flymake-ruby flymake-cursor puppet-mode mustache-mode)
+  '(auto-complete ecb go-autocomplete go-mode fullscreen-mode flymake-ruby flymake-cursor puppet-mode mustache-mode enh-ruby-mode robe)
   "A list of packages to ensure are installed at launch.")
 
 (defun leef-packages-installed-p ()
