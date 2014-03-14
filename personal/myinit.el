@@ -7,6 +7,7 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (ac-set-trigger-key "TAB")
+(add-to-list 'ac-modes 'enh-ruby-mode)
 
 (require 'go-autocomplete)
 
@@ -33,6 +34,13 @@
           '(lambda () (toggle-truncate-lines 1)))
 (setq comint-prompt-read-only t)
 
+;; Ruby
+;; Run robe when launching ruby cause it's awesome
+(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+
+;;(add-hook 'robe-mode-hook 'robe-ac-setup)
+
 ;; Loading
 (add-to-list 'load-path "~/.emacs.d/puppet-flymake/")
 ;; extension to mode list.  Most modes are taken care of by
@@ -45,4 +53,12 @@
 
 ;; mustache
 (require 'mustache-mode)
+
+;; dired reuse
+(toggle-diredp-find-file-reuse-dir 1)
+
+;; No scratch message
+(setq initial-scratch-message "Emacs is awesome...")
+
+(when window-system (set-frame-size (selected-frame) 160 48))
 ;;; myinit.el ends here
